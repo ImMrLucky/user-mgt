@@ -1,0 +1,14 @@
+<div class="user-wrapper">
+  <ul class="user-list">
+    <li *ngFor="let user of userList" class="user-btn-detail" [ngValue]="user">
+      <button (click)="setCurrentUser(user)">
+        <img [src]='"assets/" + user?.avatar' class="user-img"/>
+        <span class="user-name">{{ user?.name }}</span>
+      </button>
+    </li>
+  </ul>
+</div>
+
+<div class="current-user-details">
+  <app-show-current-user [currentUser]="currentSetUser"></app-show-current-user>
+</div>

@@ -1,0 +1,35 @@
+.user-wrapper {
+
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  .user-btn-detail {
+    flex: 1;
+    button {
+      background-color: #450d80;
+      cursor: pointer;
+      display: flex;
+      margin-bottom: 6px;
+      width: 190px;
+    }
+    .user-img {
+      display: flex;
+      width: 22px;
+    }
+
+    .user-name {
+      color: #fff;
+      display: flex;
+      justify-content: left;
+      vertical-align: center;
+    }
+  }
+}
+
+.current-user-details {
+  color: #fff;
+}
