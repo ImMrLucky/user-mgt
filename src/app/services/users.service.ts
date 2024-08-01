@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {of, Subject} from 'rxjs';
+import {BehaviorSubject, of, Subject} from 'rxjs';
 import {User} from "../user/user.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-  currentUser: any = new Subject();
+  currentUser: any = new BehaviorSubject({});
 
   constructor(private http: HttpClient) {
   }
@@ -53,7 +53,7 @@ export class UsersService {
   }
 
   setCurrentUser(user: User) {
-    this.currentUser = user;
-    console.log('current user', this.currentUser);
+    this.currentUser.next(user);
+
   }
 }

@@ -10,14 +10,13 @@ import {UsersService} from "../services/users.service";
   styleUrl: './show-current-user.component.scss'
 })
 export class ShowCurrentUserComponent implements OnInit {
-  @Input() currentUser: any = {};
   currentSelectedUser: any = {};
   constructor(private usersService: UsersService) {
   }
 
   ngOnInit() {
     this.getCurrentUser();
-    this.currentSelectedUser = this.currentUser;
+    // this.currentSelectedUser = this.currentUser;
   }
 
   getCurrentUser() {
